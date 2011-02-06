@@ -35,7 +35,7 @@
  * Board identifier.
  */
 #define BOARD_POWER_SUPPLY
-#define BOARD_NAME              "Power Supply"
+#define BOARD_NAME              "Power Supply Rev.A"
 
 /*
  * Board frequencies.

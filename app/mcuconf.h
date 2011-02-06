@@ -42,7 +42,7 @@
  * HAL driver system settings.
  */
 #define STM32_SW                            STM32_SW_PLL
-/* Was spinning waiting for HSE, need to check crystal connections */
+/* TODO  Was spinning waiting for HSE, need to check crystal connections */
 #define STM32_PLLSRC                        STM32_PLLSRC_HSI
 #define STM32_PLLXTPRE                      STM32_PLLXTPRE_DIV1
 #define STM32_PLLMUL_VALUE                  9
