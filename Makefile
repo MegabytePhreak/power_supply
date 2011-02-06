@@ -50,10 +50,10 @@ endif
 #
 
 # Define project name here
-PROJECT = ch
+PROJECT = power_supply
 
 # Define linker script file here
-LDSCRIPT= ch.ld
+LDSCRIPT= stm32f101xE.ld
 
 # Imported source files
 CHIBIOS = chibios
