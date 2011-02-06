@@ -1,5 +1,10 @@
-# List of all the board related files.
-BOARDSRC = ../board/board.c
+
+BOARDDIR = board
 
 # Required include directories
-BOARDINC = ../board
+BOARDINC = $(BOARDDIR)/ 
+
+
+# List of all the board related files.
+BOARDSRC = $(BOARDDIR)/board.c
+

@@ -56,13 +56,15 @@ PROJECT = ch
 LDSCRIPT= ch.ld
 
 # Imported source files
-CHIBIOS = ../chibios
-include ../board/board.mk
+CHIBIOS = chibios
+include board/board.mk
+include app/app.mk
 include $(CHIBIOS)/os/hal/platforms/STM32/platform.mk
 include $(CHIBIOS)/os/hal/hal.mk
 include $(CHIBIOS)/os/ports/GCC/ARMCMx/STM32/port.mk
 include $(CHIBIOS)/os/kernel/kernel.mk
 include $(CHIBIOS)/test/test.mk
+
 
 # C sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -74,7 +76,8 @@ CSRC = $(PORTSRC) \
        $(BOARDSRC) \
        $(CHIBIOS)/os/various/evtimer.c \
        $(CHIBIOS)/os/various/syscalls.c \
-       main.c
+	   $(APPSRC) \
+
 
 # C++ sources that can be compiled in ARM or THUMB mode depending on the global
 # setting.
@@ -105,6 +108,7 @@ ASMSRC = $(PORTASM) \
 
 INCDIR = $(PORTINC) $(KERNINC) $(TESTINC) \
          $(HALINC) $(PLATFORMINC) $(BOARDINC) \
+		 $(APPINC) \
          $(CHIBIOS)/os/various
 
 #
