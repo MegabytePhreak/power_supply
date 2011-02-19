@@ -206,3 +206,9 @@ ifeq ($(USE_FWLIB),yes)
 endif
 
 include rules.mk
+
+.PHONY: checkout
+
+checkout:
+	./checkout.sh
+	
